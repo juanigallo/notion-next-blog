@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import { Client } from "@notionhq/client"
 import Entry from '../components/Entry'
 import Nav from '../components/Nav'

@@ -3,3 +3,8 @@
   margin: auto;
 }
 
+.back {
+  &:hover {
+    color: #ffcd65;
+  }
+}
