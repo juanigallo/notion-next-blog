@@ -1,0 +1,37 @@
+.entry {
+  border: 1px solid #333;
+  background: linear-gradient(269.74deg, #000 23.75%, transparent 92.54%),
+    linear-gradient(180deg, #000 0, transparent 100%),
+    linear-gradient(to right, #333, #000), #111;
+  padding: 8px 16px;
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin: 24px 0;
+  &::before {
+    position: absolute;
+    background: linear-gradient(360deg, #000 23.75%, transparent 92.54%),
+      linear-gradient(360deg, #000 0, transparent 100%),
+      linear-gradient(to right, #000, #333), #111;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: var(--u2) var(--u3);
+    border-radius: 8px;
+  }
+  &:hover {
+    cursor: pointer;
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+.tags {
+  display: flex;
+}
