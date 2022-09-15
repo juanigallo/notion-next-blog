@@ -19,3 +19,11 @@
   background-color: #e8deee;
   color: #000;
 }
+
+.yellow {
+  background-color: #ffcd65;
+  color: #000;
+  &.white {
+    color: #fff;
+  }
+}

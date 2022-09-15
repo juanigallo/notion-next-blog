@@ -1,0 +1,17 @@
+.codeContainer {
+  border: 1px solid #333;
+  border-radius: 5px;
+  position: relative;
+}
+.code {
+  padding: 16px;
+  width: 100%;
+  display: block;
+}
+
+.tagContainer {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  max-width: 250px;
+}
