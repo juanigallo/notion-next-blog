@@ -1,22 +1,26 @@
 import { Client } from "@notionhq/client"
 import Block from "../../components/Block"
+import Nav from "../../components/Nav"
 import styles from '../../styles/Home.module.css'
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN })
 
 export default function Post({ blocks }) {
   return (
-    <div className={styles.container}>
-      {blocks.map((block, key) => {
-        return <Block data={block} key={key} />
-      })}
-    </div>
+    <>
+      <Nav />
+      <div className={styles.container}>
+        {blocks.map((block, key) => {
+          return <Block data={block} key={key} />
+        })}
+      </div>
+    </>
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ params }) {
   const blocks = await notion.blocks.children.list({
-    block_id: "fb96791a-ad60-446d-82e7-4b39a463a174"
+    block_id: params.id
   })
 
   const mappedBlocks = blocks.results.map((block) => {
