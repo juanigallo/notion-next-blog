@@ -3,4 +3,25 @@
   height: 50px;
   border-bottom: 1px solid #333;
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  .innerNav {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    h1 {
+      margin: 0;
+      margin-left: 10px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .square {
+    background-color: #ffcd65;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
 }
