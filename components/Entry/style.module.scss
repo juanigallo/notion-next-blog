@@ -8,7 +8,7 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  margin: 24px 0;
+  margin: 24px 10px;
   &::before {
     position: absolute;
     background: linear-gradient(360deg, #000 23.75%, transparent 92.54%),
@@ -34,4 +34,10 @@
 }
 .tags {
   display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .entry {
+    margin: 24px auto;
+  }
 }

@@ -25,3 +25,14 @@
     border-radius: 5px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    height: 80px;
+    width: 100%;
+    .innerNav {
+      width: 90%;
+      margin: auto;
+    }
+  }
+}
