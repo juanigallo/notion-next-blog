@@ -33,7 +33,10 @@ export async function getServerSideProps({ params }) {
     },
   });
 
-  if (entries.results.length == 0) {
+  if (
+    entries.results.length == 0 ||
+    entries.results[0].properties.visible.checkbox == false
+  ) {
     return {
       notFound: true,
     };
