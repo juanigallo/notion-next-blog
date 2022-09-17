@@ -4,25 +4,31 @@ export default function Paragraph({ blocks }) {
 
     let content = text.plain_text;
     const { annotations } = text;
-    const { bold, italic, color } = annotations;
+    const { bold, italic, color, underline } = annotations;
 
     if (italic) {
-      content = <i>{content}</i>
+      content = <i>{content}</i>;
     }
 
     if (bold) {
       content = <strong>{content}</strong>;
     }
 
+    if (underline) {
+      content = <u>{content}</u>;
+    }
+
     if (color) {
-      content = <span className={color}>{content}</span>
+      content = <span className={color}>{content}</span>;
     }
     return content;
   }
 
   return (
-    <p>{blocks.map((text) => {
-      return parseAnnotations(text)
-    })}</p>
-  )
+    <p>
+      {blocks.map((text) => {
+        return parseAnnotations(text);
+      })}
+    </p>
+  );
 }

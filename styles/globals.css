@@ -16,6 +16,12 @@ a {
 
 p, li {
   line-height: 2;
+  opacity: 0.81;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 40px 0 30px;
 }
 
 * {
