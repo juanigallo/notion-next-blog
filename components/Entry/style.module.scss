@@ -1,8 +1,8 @@
 .entry {
   border: 1px solid #333;
-  background: linear-gradient(269.74deg, #000 23.75%, transparent 92.54%),
-    linear-gradient(180deg, #000 0, transparent 100%),
-    linear-gradient(to right, #333, #000), #111;
+  background: linear-gradient(269.74deg, #191919 23.75%, transparent 92.54%),
+    linear-gradient(180deg, #191919 0, transparent 100%),
+    linear-gradient(to right, #333, #191919), #111;
   padding: 8px 16px;
   border-radius: 5px;
   width: 100%;
@@ -11,9 +11,9 @@
   margin: 24px 10px;
   &::before {
     position: absolute;
-    background: linear-gradient(360deg, #000 23.75%, transparent 92.54%),
-      linear-gradient(360deg, #000 0, transparent 100%),
-      linear-gradient(to right, #000, #333), #111;
+    background: linear-gradient(360deg, #191919 23.75%, transparent 92.54%),
+      linear-gradient(360deg, #191919 0, transparent 100%),
+      linear-gradient(to right, #191919, #333), #111;
     z-index: -1;
     opacity: 0;
     transition: opacity 0.25s linear;
