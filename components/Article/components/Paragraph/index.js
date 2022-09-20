@@ -18,9 +18,16 @@ export default function Paragraph({ blocks }) {
       content = <u>{content}</u>;
     }
 
+    if (text.href) {
+      content = <a href={text.href} className={color == 'default' ? "blue" : color}>{content}</a>;
+      return content;
+    }
+
     if (color) {
       content = <span className={color}>{content}</span>;
     }
+
+
     return content;
   }
 
