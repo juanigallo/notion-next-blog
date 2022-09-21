@@ -11,8 +11,8 @@ export default function Home({ entries }) {
     <>
       <Head>
         <title>Juani Gallo - Blog</title>
-        <meta name="description" content="Juani Gallo's blog" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content="Juani Gallo's blog" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Nav />
       <div className={styles.container}>
