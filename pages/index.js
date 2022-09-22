@@ -1,8 +1,8 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.scss";
-import { Client } from "@notionhq/client";
-import Entry from "../components/Entry";
-import Nav from "../components/Nav";
+import Head from 'next/head';
+import styles from '../styles/Home.module.scss';
+import { Client } from '@notionhq/client';
+import Entry from '../components/Entry';
+import Nav from '../components/Nav';
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
@@ -11,13 +11,13 @@ export default function Home({ entries }) {
     <>
       <Head>
         <title>Juani Gallo - Blog</title>
-        <meta name='description' content="Juani Gallo's blog" />
+        <meta name='description' content='Juani Gallos blog' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Nav />
       <div className={styles.container}>
         <section className={styles.entries}>
-          {entries.length == 0 && "There are no entries"}
+          {entries.length == 0 && 'There are no entries'}
           {entries.map((entry, key) => {
             return <Entry key={key} data={entry} />;
           })}
