@@ -33,9 +33,9 @@ Clone this repository and in the root of the project, create a file called `.env
 
 ### 5. Start writing
 
-Now you can create a description column in your database and start writing your posts, the information will automatically be displayed ni your Frontend
+Now you can create a description, visible and niceUrl column in your database and start writing your posts, the information will automatically be displayed ni your Frontend
 
-![image](https://user-images.githubusercontent.com/4969737/190541496-7e96d6bb-6260-45fb-b366-55c061a7df62.png)
+![image](https://user-images.githubusercontent.com/4969737/192896895-20b6f5b5-f862-465c-b83a-8b0245ebafcb.png)
 ![image](https://user-images.githubusercontent.com/4969737/190541594-47788354-3a4d-42aa-9a37-71cdb3ded506.png)
 ![image](https://user-images.githubusercontent.com/4969737/190541698-2f4096b8-22d6-4741-9b6c-3049800f27e9.png)
 
