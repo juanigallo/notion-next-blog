@@ -10,8 +10,8 @@ export default function Home({ entries }) {
   return (
     <>
       <Head>
-        <title>Juani Gallo - Blog</title>
-        <meta name="description" content="Juani Gallo's blog" />
+        <title>FundIt - Blog</title>
+        <meta name="description" content="FundIt - Blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />

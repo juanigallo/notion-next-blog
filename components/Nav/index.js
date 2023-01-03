@@ -7,8 +7,10 @@ export default function Nav() {
       <div className={styles.innerNav}>
         <Link href="/">
           <div className={styles.logoContainer}>
-            <div className={styles.square}></div>
-            <h1>Juani Gallo</h1>
+            <div className={styles.square}>
+              <img src="https://fundit.finance/logo.svg" />
+            </div>
+            <h1>FundIt</h1>
           </div>
         </Link>
       </div>
