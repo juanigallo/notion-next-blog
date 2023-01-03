@@ -12,7 +12,7 @@ export default function Home({ entries }) {
       <Head>
         <title>FundIt - Blog</title>
         <meta name="description" content="FundIt - Blog" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://fundit.finance/fundit.ico" />
       </Head>
       <Nav />
       <div className={styles.container}>
