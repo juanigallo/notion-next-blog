@@ -19,7 +19,7 @@ export default function Paragraph({ blocks }) {
     }
 
     if (text.href) {
-      content = <a href={text.href} className={color == 'default' ? "blue" : color}>{content}</a>;
+      content = <a href={text.href} className={color == 'default' ? "yellow" : color}>{content}</a>;
       return content;
     }
 
