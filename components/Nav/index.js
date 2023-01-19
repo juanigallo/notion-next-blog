@@ -11,6 +11,11 @@ export default function Nav() {
             <h1>Juani Gallo</h1>
           </div>
         </Link>
+        <ul className={styles.list}>
+          <Link href="/challenges">
+            <li>Challenges</li>
+          </Link>
+        </ul>
       </div>
     </nav>
   );
