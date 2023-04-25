@@ -2,12 +2,12 @@ import { Client } from "@notionhq/client";
 import Link from "next/link";
 import Block from "../../components/Block";
 import Nav from "../../components/Nav";
-import Tag from "../../components/Tag";
+import Substack from "../../components/Substack";
 import styles from "../../styles/Home.module.scss";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
-export default function Post({ blocks, tags }) {
+export default function Post({ blocks, title }) {
   return (
     <>
       <Nav />
@@ -15,15 +15,13 @@ export default function Post({ blocks, tags }) {
         <div className={styles.back}>
           <Link href="/">← Back to list</Link>
         </div>
-        <div className={styles.tagsContainer}>
-          {tags.map((tag, key) => {
-            return <Tag key={key} color={tag.color} name={tag.name} />;
+        <div className={styles.articleContainer}>
+          <h1>{title}</h1>
+          {blocks.map((block, key) => {
+            return <Block data={block} key={key} />;
           })}
+          <Substack />
         </div>
-
-        {blocks.map((block, key) => {
-          return <Block data={block} key={key} />;
-        })}
       </div>
     </>
   );
@@ -39,7 +37,6 @@ export async function getServerSideProps({ params }) {
       },
     },
   });
-
 
   if (
     entries.results.length == 0 ||
@@ -72,7 +69,7 @@ export async function getServerSideProps({ params }) {
   return {
     props: {
       blocks: mappedBlocks,
-      tags: entries.results[0]?.properties?.tags?.multi_select ?? [],
+      title: entries.results[0].properties.name.title[0].plain_text,
     },
   };
 }
