@@ -2,6 +2,7 @@ import { Client } from "@notionhq/client";
 import Link from "next/link";
 import Block from "../../components/Block";
 import Nav from "../../components/Nav";
+import Substack from "../../components/Substack";
 import styles from "../../styles/Home.module.scss";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
@@ -19,20 +20,7 @@ export default function Post({ blocks, title }) {
           {blocks.map((block, key) => {
             return <Block data={block} key={key} />;
           })}
-          <iframe
-            src="https://fundit.substack.com/embed"
-            width="480"
-            height="320"
-            style={{
-              border: "1px solid #3d3d3d",
-              borderRadius: "5px",
-              background: "#1c1d1e",
-              margin: "auto",
-              width: "100%",
-            }}
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
+          <Substack />
         </div>
       </div>
     </>

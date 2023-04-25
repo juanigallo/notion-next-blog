@@ -13,6 +13,9 @@ export default function Nav() {
             <h1>FundIt</h1>
           </div>
         </Link>
+        <a href="https://fundit.finance" target="_blank">
+          <button>Build with FundIt! 🚀</button>
+        </a>
       </div>
     </nav>
   );

@@ -12,7 +12,6 @@ export default function Entry({ data }) {
         <Title title={data.name} />
         <section className={styles.tags}>
           {data.tags.map((tag, key) => {
-            console.log(tag, 123);
             return <Tag key={key} color={tag.color} name={tag.name} />;
           })}
         </section>

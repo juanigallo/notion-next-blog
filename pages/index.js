@@ -4,6 +4,7 @@ import { Client } from "@notionhq/client";
 import Entry from "../components/Entry";
 import Nav from "../components/Nav";
 import Featured from "../components/Featured";
+import Substack from "../components/Substack";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
@@ -32,6 +33,7 @@ export default function Home({ entries }) {
             }
           })}
         </section>
+        <Substack />
       </div>
     </>
   );

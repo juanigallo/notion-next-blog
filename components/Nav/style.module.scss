@@ -4,18 +4,29 @@
   border-bottom: 1px solid #333;
   margin-bottom: 40px;
   display: flex;
-  align-items: center;
   .innerNav {
     max-width: 960px;
     width: 100%;
     margin: auto;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     h1 {
       margin: 0;
       margin-left: 10px;
       font-size: 1rem;
       display: flex;
       align-items: center;
+    }
+
+    button {
+      background-color: #a7346e;
+      border: none;
+      box-shadow: none;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
     }
   }
   .logoContainer {
