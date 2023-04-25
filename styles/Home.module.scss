@@ -2,6 +2,9 @@
   max-width: 960px;
   width: 100%;
   margin: auto;
+  img {
+    width: 100%;
+  }
 }
 
 .articleContainer {
@@ -27,6 +30,14 @@
   &:hover {
     color: #ffcd65;
   }
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
 }
 
 @media only screen and (max-width: 768px) {

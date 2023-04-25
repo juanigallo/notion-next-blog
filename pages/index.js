@@ -47,7 +47,7 @@ export async function getServerSideProps() {
   const mappedEntries = entries.results
     .map((entry) => {
       const { properties } = entry;
-      const { name, description, tags, visible, niceUrl } = properties;
+      const { name, description, tags, visible, niceUrl, hideInList } = properties;
 
       return {
         name: name.title,
@@ -56,9 +56,10 @@ export async function getServerSideProps() {
         id: entry.id,
         visible: visible.checkbox,
         niceUrl: niceUrl.rich_text[0].plain_text,
+        hideInList: hideInList?.checkbox
       };
     })
-    .filter((entry) => entry.visible == true);
+    .filter((entry) => entry.visible == true && entry.hideInList == false);
 
   return {
     props: {
