@@ -5,14 +5,13 @@ import Title from "../Title";
 import Tag from "../Tag";
 import Description from "../Description";
 
-export default function Entry({ data }) {
+export default function Featured({ data }) {
   return (
     <Link href={`/${data.niceUrl}`}>
       <div className={styles.entry}>
         <Title title={data.name} />
         <section className={styles.tags}>
           {data.tags.map((tag, key) => {
-            console.log(tag, 123);
             return <Tag key={key} color={tag.color} name={tag.name} />;
           })}
         </section>

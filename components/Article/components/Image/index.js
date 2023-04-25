@@ -1,3 +1,3 @@
 export default function Image({ url }) {
-  return <img src={url} />
+  return <img style={{ margin: "10px auto", display: "block" }} src={url} />;
 }

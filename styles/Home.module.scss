@@ -1,7 +1,18 @@
 .container {
-  max-width: 800px;
+  max-width: 960px;
   width: 100%;
   margin: auto;
+}
+
+.articleContainer {
+  max-width: 800px;
+  margin: auto;
+}
+
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .back {

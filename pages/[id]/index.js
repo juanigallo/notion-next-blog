@@ -6,7 +6,7 @@ import styles from "../../styles/Home.module.scss";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
-export default function Post({ blocks }) {
+export default function Post({ blocks, title }) {
   return (
     <>
       <Nav />
@@ -14,9 +14,26 @@ export default function Post({ blocks }) {
         <div className={styles.back}>
           <Link href="/">← Back to list</Link>
         </div>
-        {blocks.map((block, key) => {
-          return <Block data={block} key={key} />;
-        })}
+        <div className={styles.articleContainer}>
+          <h1>{title}</h1>
+          {blocks.map((block, key) => {
+            return <Block data={block} key={key} />;
+          })}
+          <iframe
+            src="https://fundit.substack.com/embed"
+            width="480"
+            height="320"
+            style={{
+              border: "1px solid #3d3d3d",
+              borderRadius: "5px",
+              background: "#1c1d1e",
+              margin: "auto",
+              width: "100%",
+            }}
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
       </div>
     </>
   );
@@ -64,6 +81,7 @@ export async function getServerSideProps({ params }) {
   return {
     props: {
       blocks: mappedBlocks,
+      title: entries.results[0].properties.name.title[0].plain_text,
     },
   };
 }
