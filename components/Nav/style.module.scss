@@ -4,12 +4,12 @@
   border-bottom: 1px solid #333;
   margin-bottom: 40px;
   display: flex;
-  align-items: center;
   .innerNav {
-    max-width: 800px;
+    max-width: 960px;
     width: 100%;
     margin: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     h1 {
       margin: 0;
@@ -18,20 +18,15 @@
       display: flex;
       align-items: center;
     }
-    .list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      li {
-        color: #fff;
-        font-weight: bold;
-        &:hover {
-          color: #ffcd65;
-          cursor: pointer;
-        }
-      }
+
+    button {
+      background-color: #a7346e;
+      border: none;
+      box-shadow: none;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
     }
   }
   .logoContainer {
@@ -40,10 +35,13 @@
     height: 80px;
     align-items: center;
     .square {
-      background-color: #ffcd65;
       width: 30px;
       height: 30px;
       border-radius: 5px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

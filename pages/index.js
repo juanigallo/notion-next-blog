@@ -3,6 +3,8 @@ import styles from "../styles/Home.module.scss";
 import { Client } from "@notionhq/client";
 import Entry from "../components/Entry";
 import Nav from "../components/Nav";
+import Featured from "../components/Featured";
+import Substack from "../components/Substack";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
@@ -10,18 +12,28 @@ export default function Home({ entries }) {
   return (
     <>
       <Head>
-        <title>Juani Gallo - Blog</title>
-        <meta name="description" content="Juani Gallo's blog" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>FundIt - Blog</title>
+        <meta name="description" content="FundIt - Blog" />
+        <link rel="icon" href="https://fundit.finance/fundit.ico" />
       </Head>
       <Nav />
       <div className={styles.container}>
+        {entries.length == 0 && "There are no entries"}
+        {entries.length != 0 && (
+          <>
+            <h1>Featured article</h1>
+            <Featured data={entries[0]} />
+          </>
+        )}
+        <h2>More articles</h2>
         <section className={styles.entries}>
-          {entries.length == 0 && "There are no entries"}
           {entries.map((entry, key) => {
-            return <Entry key={key} data={entry} />;
+            if (key !== 0) {
+              return <Entry key={key} data={entry} />;
+            }
           })}
         </section>
+        <Substack />
       </div>
     </>
   );
