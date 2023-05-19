@@ -17,8 +17,11 @@ export default function Block({ data }) {
       heading_2: (heading) => <Heading2 blocks={heading.rich_text} />,
       heading_3: (heading) => <Heading3 blocks={heading.rich_text} />,
       bulleted_list_item: (listItem) => <List blocks={listItem.rich_text} />,
-      image: (image) => <Image url={image.external.url} />,
-    };
+      image: (image) => {
+        let url = image.file.url ? image.file.url : ""
+        return <Image url={url} alt={image.caption[0]?.plain_text} />
+      }
+    }
 
     return types[type] ? types[type](blockData[type]) : "";
   }
